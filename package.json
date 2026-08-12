@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "concurrently \"npm --prefix Backeend run dev\" \"npm --prefix Frontend run dev\"",
-    "start:backend": "npm --prefix Backeend start",
-    "build:frontend": "npm --prefix Frontend run build"
+    "build": "npm --prefix Frontend install && npm --prefix Frontend run build && npm --prefix Backeend install",
+    "start": "npm --prefix Backeend start"
   },
   "devDependencies": {
     "concurrently": "^10.0.4"
